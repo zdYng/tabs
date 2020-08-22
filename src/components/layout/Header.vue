@@ -1,9 +1,9 @@
 <template>
-
-            <el-header>
-11
-            </el-header>
-
+<div>
+    <el-header class="my-header" style="background-color: #0066CC;height:160px">
+        <slot></slot>
+    </el-header>
+</div>
 </template>
 
 <script>
@@ -15,33 +15,14 @@
     }
 </script>
 
-<style>
-    .el-header{
-        background-color: #0066CC;
+<style scoped>
+    /deep/ .my-header{
+        background-color: #0066CC !important;
         color: #333;
-        text-align: center;
+        /*text-align: center;*/
         /*line-height: 170px;*/
         width: 1920px;
-        height: 170px
-    }
-    .el-aside {
-        /*background-color: #D3DCE6;*/
-        color: #333;
-        text-align: center;
-        line-height: 910px;
-        /*line-width: 349px;*/
-        width:349px;
-        height:910px;
-        background:rgba(235,245,255,1);
-    }
-    .el-main {
-        background-color: #FFFF;
-        color: #333;
-        text-align: center;
-        line-height: 160px;
-    }
-    body > .el-container {
-        margin-bottom: 40px;
+        height: 170px;
     }
 
 </style>

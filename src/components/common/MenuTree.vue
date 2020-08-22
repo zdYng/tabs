@@ -1,20 +1,19 @@
 <template>
-
-            <el-aside class="my-aside">
-                <MenuTree></MenuTree>
-            </el-aside>
-
+        <el-menu>
+            <el-tree
+                    :data="data"
+                    :props="defaultProps"
+                    accordion
+                    @node-click="handleNodeClick">
+            </el-tree>
+        </el-menu>
 </template>
 
 <script>
-    // import ElContainer from "element-ui/packages/container/src/main";
-    import MenuTree from "@/components/common/MenuTree.vue";
     export default {
         components: {
-            MenuTree
-
         },
-        name:'Aside',
+        name:'MenuTree',
         data(){
             return {
                 data: [{
@@ -68,15 +67,17 @@
 
 <style >
 
-     .my-aside {
-         background-color: #D3DCE6;
-         color: #333;
-         background-color: #EBF5FF;
-         color: #333;
-         text-align: center;
-         width:349px;
-         height:910px;
-     }
+    .el-menu:hover{
+        background-color: #EBF5FF !important;
+        border-right: 0px;
+        /*width:349px;*/
+        /*height:910px;*/
 
+    }
+    .el-tree{
+        border-right: 0px;
+        color: black;
+        background: #EBF5FF;
+    }
 
 </style>
