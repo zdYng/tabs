@@ -1,0 +1,22 @@
+<template>
+    <div>
+        <Form :model="formItem" :label-width="80">
+            <Input v-model="formItem.input" placeholder="Enter something..."></Input>
+
+        </Form>
+    </div>
+</template>
+
+<script>
+    export default {
+        name:"CInput",
+        data () {
+            return {
+                formItem: {
+                    input: '',
+
+                }
+            }
+        }
+    }
+</script>
